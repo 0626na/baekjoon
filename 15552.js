@@ -1,23 +1,15 @@
 function solution(input) {
-  const x = parseInt(input[0]);
-  const y = parseInt(input[1]);
+  const count = parseInt(input[0]);
+  let result = "";
 
-  if (x > 0 && y > 0) {
-    console.log(1);
-    return;
+  for (let index = 1; index < count + 1; index++) {
+    result += `${
+      parseInt(input[index].split(" ")[0]) +
+      parseInt(input[index].split(" ")[1])
+    }\n`;
   }
-  if (x < 0 && y > 0) {
-    console.log(2);
-    return;
-  }
-  if (x < 0 && y < 0) {
-    console.log(3);
-    return;
-  }
-  if (x > 0 && y < 0) {
-    console.log(4);
-    return;
-  }
+
+  console.log(result);
 }
 
 const readline = require("readline");

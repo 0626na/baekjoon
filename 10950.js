@@ -1,22 +1,8 @@
 function solution(input) {
-  const x = parseInt(input[0]);
-  const y = parseInt(input[1]);
+  for (let index = 1; index <= parseInt(input[0]); index++) {
+    const arr = input[index].split(" ").map((item) => parseInt(item));
 
-  if (x > 0 && y > 0) {
-    console.log(1);
-    return;
-  }
-  if (x < 0 && y > 0) {
-    console.log(2);
-    return;
-  }
-  if (x < 0 && y < 0) {
-    console.log(3);
-    return;
-  }
-  if (x > 0 && y < 0) {
-    console.log(4);
-    return;
+    console.log(arr[0] + arr[1]);
   }
 }
 
